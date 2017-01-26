@@ -1,0 +1,31 @@
+/*
+Selector {
+  property: value;
+  property: value
+} */
+/* By element name */
+body {
+  color: red;
+  font-family: helvetica;
+  font-size: 16px;
+  font-style: italic;
+}
+
+h1{
+
+
+}
+
+/* By class name */
+.classOne {
+
+}
+
+.classTwo {
+
+}
+
+/* By Id */
+#Id {
+
+}
