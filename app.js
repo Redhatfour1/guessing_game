@@ -7,7 +7,7 @@ alert('Hello ' + userName + '. Thanks for coming to my site!');
 // Validate that their answer matches my answer
 // Depending on true or False, provide feedback
 var answerOne = prompt('What city was I born in?').toUpperCase();
-console.log('The answer to question one is: ');
+console.log('The answer to question one is: ' + answerOne);
 var myAnswerOne = 'philadelphia';
 
 if(answerOne === myAnswerOne || 'philly') {
@@ -17,7 +17,7 @@ if(answerOne === myAnswerOne || 'philly') {
 }
 
 var answerTwo = prompt('What brought me to Washington?').toUpperCase();
-console.log('The answer to question two is: ');
+console.log('The answer to question two is: ' + answerTwo);
 var myAnswerTwo = 'military';
 
 if(answerTwo === myAnswerTwo || 'navy') {
@@ -37,7 +37,7 @@ if(answerThree === myAnswerThree) {
 }
 
 var answerFour = prompt('What profession have I spent most of my career in?').toLowerCase();
-console.log('The answer to question four is: ');
+console.log('The answer to question four is: ' + answerFour);
 var myAnswerFour = 'sales';
 
 if(answerFour === myAnswerFour) {
@@ -47,7 +47,7 @@ if(answerFour === myAnswerFour) {
 }
 
 var answerFive = prompt('Am I a people person?').toUpperCase();
-console.log('The answer to question five is: ');
+console.log('The answer to question five is: ' + answerFive);
 
 if(answerFive === 'y' || answerFive === 'yes') {
   alert('You are correct. I enjoy talking to people!');
@@ -56,7 +56,7 @@ if(answerFive === 'y' || answerFive === 'yes') {
   alert('Oh no, that\'s incorrect. I do enjoy talking to people!');
 }
 var answerSix = prompt('Can you guess what\'s my favorite food?');
-//console.log('username ' + answered + answerSix + 'for answer six.');
+console.log('The answer to question five is: ' + answerSix);
 
 var food = ['Grilled Salmon', 'Fried Chicken', 'Philly Cheesesteak', 'Pasta'];
 food.indexOf('Grilled Salmon');
