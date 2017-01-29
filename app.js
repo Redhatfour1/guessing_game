@@ -100,7 +100,7 @@ for(var index = 0; index < 6; index++) {
   var answerEight = prompt('What places have I traveled to?').toLowerCase();
   console.log('The answer to question eight is: ' + answerEight);
 //
-  if (places.indexOf(answerEight) === answerEight) {
+  if (places.indexOf(answerEight) !== - 1) {
     alert('Yes, I\'ve been there and would love to go back someday.');
     break;
   }
