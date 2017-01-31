@@ -1,4 +1,8 @@
 'use strict';
+
+var correctAnswers = [];
+var wrongAnswers = [];
+
 // Prompt the user to input their name.
 // Store user's name in a variable.
 // Ask the user eight questions and take their answer as input which will be stored in a variable.
@@ -11,11 +15,11 @@ console.log('The user name is: ' + userName);
 // Validate that their answer matches my answer or not.
 var answerOne = prompt('What city was I born in?').toLowerCase();
 console.log('The answer to question one is: ' + answerOne);
-var myAnswerOne = 'philadelphia';
 // User's input for correct answer can be philadelphia or philly.
 // Depending on true or False, provide feedback.
-if(answerOne === myAnswerOne || 'philly') {
+if(answerOne === philadelphia || answerOne === 'philly') {
   alert('You got it right. I was born in Philly!');
+  correctAnswers.push(1);
 } else {
   alert('Sorry, that\'s wrong. I was born in Philadelphia');
 }
@@ -25,11 +29,11 @@ if(answerOne === myAnswerOne || 'philly') {
 // Validate that their answer matches my answer or not.
 var answerTwo = prompt('What brought me to Washington?').toLowerCase();
 console.log('The answer to question two is: ' + answerTwo);
-var myAnswerTwo = 'military';
 // User's input for correct answer can be military or navy.
 // Depending on true or False, provide feedback.
-if(answerTwo === myAnswerTwo || 'navy') {
+if(answerTwo === 'military' || answerTwo === 'navy') {
   alert('You are correct. I am a US Navy Vet and I was stationed in Bremerton WA!');
+  correctAnswers.push(2);
 } else {
   alert('Ahh, that\'s incorrect. I am a US Navy Vet and I was stationed in Bremerton WA!');
 }
@@ -44,6 +48,7 @@ var myAnswerThree = 'MOVING';
 // Depending on true or False, provide feedback.
 if(answerThree === myAnswerThree) {
   alert('You are correct. I\'ve owned a moving company!');
+  correctAnswers.push(3);
 } else {
   alert('Oh no, that\'s incorrect. I\'ve owned a moving company!');
 }
@@ -58,6 +63,7 @@ var myAnswerFour = 'sales';
 // Depending on true or False, provide feedback.
 if(answerFour === myAnswerFour) {
   alert('You are correct. I have a background in sales!');
+  correctAnswers.push(4);
 } else {
   alert('Oh no, that\'s incorrect. I have a background in sales!');
 }
@@ -71,6 +77,7 @@ console.log('The answer to question five is: ' + answerFive);
 // Depending on true or False, provide feedback.
 if(answerFive === 'y' || answerFive === 'yes') {
   alert('You are correct. I enjoy talking to people!');
+  correctAnswers.push(5);
 } else {
   // User's input for correct answer can be n or no.
   (answerFive === 'n' || answerFive === 'no');
@@ -90,6 +97,7 @@ food.indexOf('pasta');
 // Use the indexOf method to point out the correct answer in the array.
 if(food.indexOf('grilled salmon') === 0) {
   alert('I love it too however my favorite is Grilled Salmon.');
+  correctAnswers.push(6);
 } else {
   alert('My favorite is Grilled Salmon but that\'s good too');
 }
@@ -120,6 +128,7 @@ do {
   }
   else if(answerSeven == 20) {
     alert('Wow, you are correct. Good guess!');
+    correctAnswers.push(7);
     // Use the keyword break to stop the loop once the correct input is evaluated.
     break;
     // Give feedback if answer is equal to 20.
@@ -137,6 +146,7 @@ for(var index = 0; index < 6; index++) {
   // If user's input is not outside of the array.
   if (places.indexOf(answerEight) !== - 1) {
     alert('Yes, I\'ve been there and would love to go back someday.');
+    correctAnswers.push(8);
     // Use the keyword break to stop the loop.
     break;
   }
@@ -144,3 +154,4 @@ for(var index = 0; index < 6; index++) {
     alert('Try again, you might get it right');
   }
 }
+alert('So ' + userName + ' you were able to get ' + correctAnswers.length + ' right out of seven');
